@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NexusTech - E-commerce de Hardware, Periféricos Gamer e Workstations de Alta Performance." />
+  <title>NexusTech | Hardware & Tecnologia de Alta Performance</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER & NAVEGAÇÃO ================= -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="#inicio" class="header__logo" data-route="inicio" aria-label="NexusTech Início">
+        <img 
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=80&q=80" 
+          alt="Ícone microchip NexusTech" 
+          class="header__logo-img"
+        />
+        <span class="header__logo-text">Nexus<span class="text-accent">Tech</span></span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Menu Principal">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#inicio" class="nav__link active" data-route="inicio">Início</a>
+          </li>
+          <li class="nav__item">
+            <a href="#produtos" class="nav__link" data-route="produtos">Produtos</a>
+          </li>
+          <li class="nav__item">
+            <a href="#ofertas" class="nav__link" data-route="ofertas">Ofertas</a>
+          </li>
+          <li class="nav__item">
+            <a href="#sobre" class="nav__link" data-route="sobre">Sobre Nós</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contato" class="nav__link" data-route="contato">Contato</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrinho de compras">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-btn__badge" id="cartBadge">0</span>
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= CONTEÚDO PRINCIPAL (VIEWS SPA) ================= -->
+  <main class="main">
+
+    <!-- ==================== VIEW 1: INÍCIO ==================== -->
+    <section id="view-inicio" class="view active" aria-labelledby="hero-heading">
+      
+      <!-- Carrossel Hero -->
+      <div class="carousel" id="heroCarousel">
+        <div class="carousel__track">
+          
+          <!-- Slide 1 -->
+          <article class="carousel__slide active">
+            <div class="carousel__img-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1600&q=80" 
+                alt="Setup gamer iluminado com placa de vídeo de última geração" 
+                class="carousel__img"
+              />
+            </div>
+            <div class="container carousel__content">
+              <span class="carousel__tag">Nova Geração RTX & Radeon</span>
+              <h1 id="hero-heading" class="carousel__title">Potência Extrema Para Seu Setup</h1>
+              <p class="carousel__desc">Placas de vídeo, processadores desbloqueados e refrigeração líquida com até 25% OFF à vista.</p>
+              <div class="carousel__cta-group">
+                <a href="#produtos" class="btn btn--primary" data-route="produtos">Explorar Hardware</a>
+                <a href="#ofertas" class="btn btn--outline" data-route="ofertas">Ver Ofertas</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article class="carousel__slide">
+            <div class="carousel__img-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=1600&q=80" 
+                alt="Teclado mecânico RGB e periféricos competitivos" 
+                class="carousel__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="container carousel__content">
+              <span class="carousel__tag">Precisão Competitiva</span>
+              <h2 class="carousel__title">Periféricos Pro-Player</h2>
+              <p class="carousel__desc">Teclados mecânicos customizáveis, mouses ultraleves e monitores 240Hz com tempo de resposta de 0.5ms.</p>
+              <div class="carousel__cta-group">
+                <a href="#sec-perifericos" class="btn btn--primary" data-scroll="sec-perifericos">Ver Periféricos</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="carousel__slide">
+            <div class="carousel__img-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1600&q=80" 
+                alt="Notebook ultrafino de alta performance sobre mesa moderna" 
+                class="carousel__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="container carousel__content">
+              <span class="carousel__tag">Mobilidade & Criação</span>
+              <h2 class="carousel__title">Workstations & Ultrabooks</h2>
+              <p class="carousel__desc">Desempenho de desktop em chassis de alumínio aeroespacial para desenvolvedores, designers e gamers.</p>
+              <div class="carousel__cta-group">
+                <a href="#sec-notebooks" class="btn btn--primary" data-scroll="sec-notebooks">Conhecer Modelos</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Controles do Carrossel -->
+        <button class="carousel__arrow carousel__arrow--prev" id="prevSlide" aria-label="Slide anterior">&#10094;</button>
+        <button class="carousel__arrow carousel__arrow--next" id="nextSlide" aria-label="Próximo slide">&#10095;</button>
+        
+        <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Seleção de slides">
+          <button class="carousel__dot active" data-slide="0" aria-label="Ir para slide 1"></button>
+          <button class="carousel__dot" data-slide="1" aria-label="Ir para slide 2"></button>
+          <button class="carousel__dot" data-slide="2" aria-label="Ir para slide 3"></button>
+        </div>
+      </div>
+
+      <!-- Barra de Benefícios -->
+      <div class="benefits-bar">
+        <div class="container benefits-bar__grid">
+          <div class="benefit-item">
+            <span class="benefit-item__icon">⚡</span>
+            <div>
+              <strong>Envio Expresso 24h</strong>
+              <p>Despacho imediato com seguro total</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-item__icon">🛡️</span>
+            <div>
+              <strong>Garantia Estendida</strong>
+              <p>Até 3 anos direto com o fabricante</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-item__icon">💳</span>
+            <div>
+              <strong>12x Sem Juros</strong>
+              <p>Ou 15% de desconto no PIX</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-item__icon">🔧</span>
+            <div>
+              <strong>Suporte Especializado</strong>
+              <p>Consultoria técnica gratuita</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEÇÃO CATEGORIA 1: HARDWARE & COMPONENTES -->
+      <section id="sec-hardware" class="category-section container">
+        <div class="section-header">
+          <div>
+            <span class="section-subtitle">Performance Bruta</span>
+            <h2 class="section-title">Hardware & Componentes</h2>
+          </div>
+          <a href="#produtos" class="section-link" data-route="produtos" data-filter="hardware">Ver todos &rarr;</a>
+        </div>
+
+        <div class="products-grid" id="grid-hardware">
+          <!-- Card 1 -->
+          <article class="product-card" data-id="hw-1" data-category="hardware" data-offer="true">
+            <span class="product-card__badge">-18%</span>
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=600&q=80" 
+                alt="Placa de Vídeo RTX 4080 Super 16GB GDDR6X" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Placa de Vídeo</span>
+              <h3 class="product-card__title">GPU RTX 4080 Super OC 16GB GDDR6X</h3>
+              <p class="product-card__specs">Triple Fan • DLSS 3.5 • Ray Tracing • HDMI 2.1</p>
+              <div class="product-card__pricing">
+                <span class="product-card__old-price">R$ 8.499,00</span>
+                <span class="product-card__price" data-price="6969.00">R$ 6.969,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="product-card" data-id="hw-2" data-category="hardware" data-offer="false">
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=600&q=80" 
+                alt="Processador Ryzen 9 7950X3D 16 Núcleos" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Processador</span>
+              <h3 class="product-card__title">CPU Ryzen 9 7950X3D 5.7GHz AM5</h3>
+              <p class="product-card__specs">16 Cores • 32 Threads • 144MB Cache 3D</p>
+              <div class="product-card__pricing">
+                <span class="product-card__price" data-price="4199.00">R$ 4.199,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card" data-id="hw-3" data-category="hardware" data-offer="true">
+            <span class="product-card__badge">-22%</span>
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=600&q=80" 
+                alt="Kit Memória RAM DDR5 32GB RGB 6400MHz" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Memória RAM</span>
+              <h3 class="product-card__title">Kit RAM DDR5 32GB (2x16GB) 6400MHz RGB</h3>
+              <p class="product-card__specs">CL32 • Intel XMP 3.0 & AMD EXPO • Dissipador Alumínio</p>
+              <div class="product-card__pricing">
+                <span class="product-card__old-price">R$ 1.199,00</span>
+                <span class="product-card__price" data-price="935.00">R$ 935,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="product-card" data-id="hw-4" data-category="hardware" data-offer="false">
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=80" 
+                alt="SSD NVMe M.2 2TB PCIe Gen4 Ultra Rápido" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Armazenamento</span>
+              <h3 class="product-card__title">SSD NVMe M.2 2TB PCIe 4.0 7450MB/s</h3>
+              <p class="product-card__specs">Leitura 7450MB/s • Gravação 6900MB/s • Heatsink</p>
+              <div class="product-card__pricing">
+                <span class="product-card__price" data-price="1149.00">R$ 1.149,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SEÇÃO CATEGORIA 2: PERIFÉRICOS GAMER -->
+      <section id="sec-perifericos" class="category-section container">
+        <div class="section-header">
+          <div>
+            <span class="section-subtitle">Controle & Imersão</span>
+            <h2 class="section-title">Periféricos Gamer</h2>
+          </div>
+          <a href="#produtos" class="section-link" data-route="produtos" data-filter="perifericos">Ver todos &rarr;</a>
+        </div>
+
+        <div class="products-grid" id="grid-perifericos">
+          <!-- Card 5 -->
+          <article class="product-card" data-id="pf-1" data-category="perifericos" data-offer="true">
+            <span class="product-card__badge">-15%</span>
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=600&q=80" 
+                alt="Teclado Mecânico Custom 75% Wireless RGB" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Teclado Mecânico</span>
+              <h3 class="product-card__title">Teclado Mecânico TKL Pro Switch Linear</h3>
+              <p class="product-card__specs">Hot-Swappable • Keycaps PBT • Tri-Mode Wireless</p>
+              <div class="product-card__pricing">
+                <span class="product-card__old-price">R$ 749,00</span>
+                <span class="product-card__price" data-price="636.00">R$ 636,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="product-card" data-id="pf-2" data-category="perifericos" data-offer="false">
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=600&q=80" 
+                alt="Mouse Gamer Sem Fio Ultraleve 58g 26000 DPI" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Mouse Gamer</span>
+              <h3 class="product-card__title">Mouse Wireless Ultralight 58g 26K DPI</h3>
+              <p class="product-card__specs">Sensor Óptico Focus Pro • Polling Rate 4000Hz</p>
+              <div class="product-card__pricing">
+                <span class="product-card__price" data-price="549.00">R$ 549,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="product-card" data-id="pf-3" data-category="perifericos" data-offer="true">
+            <span class="product-card__badge">-20%</span>
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=600&q=80" 
+                alt="Headset Gamer Surround 7.1 Wireless" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Áudio Gamer</span>
+              <h3 class="product-card__title">Headset Wireless Planar Magnetic 7.1</h3>
+              <p class="product-card__specs">Drivers 50mm • Microfone Broadcast • 40h Bateria</p>
+              <div class="product-card__pricing">
+                <span class="product-card__old-price">R$ 999,00</span>
+                <span class="product-card__price" data-price="799.00">R$ 799,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="product-card" data-id="pf-4" data-category="perifericos" data-offer="false">
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=600&q=80" 
+                alt="Monitor Gamer Curvo 27 Polegadas QHD 240Hz" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Monitor Gamer</span>
+              <h3 class="product-card__title">Monitor 27" Fast IPS QHD 240Hz 0.5ms</h3>
+              <p class="product-card__specs">2560x1440 • G-Sync & FreeSync • HDR400 • 99% DCI-P3</p>
+              <div class="product-card__pricing">
+                <span class="product-card__price" data-price="2499.00">R$ 2.499,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SEÇÃO CATEGORIA 3: NOTEBOOKS & WORKSTATIONS -->
+      <section id="sec-notebooks" class="category-section container">
+        <div class="section-header">
+          <div>
+            <span class="section-subtitle">Produtividade & Mobilidade</span>
+            <h2 class="section-title">Notebooks & Workstations</h2>
+          </div>
+          <a href="#produtos" class="section-link" data-route="produtos" data-filter="notebooks">Ver todos &rarr;</a>
+        </div>
+
+        <div class="products-grid" id="grid-notebooks">
+          <!-- Card 9 -->
+          <article class="product-card" data-id="nb-1" data-category="notebooks" data-offer="true">
+            <span class="product-card__badge">-12%</span>
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80" 
+                alt="Notebook Gamer 16 polegadas Core i9 RTX 4070" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Notebook Gamer</span>
+              <h3 class="product-card__title">Notebook Titan 16" i9-14900HX RTX 4070</h3>
+              <p class="product-card__specs">32GB DDR5 • 1TB NVMe • Tela Mini-LED 240Hz</p>
+              <div class="product-card__pricing">
+                <span class="product-card__old-price">R$ 13.500,00</span>
+                <span class="product-card__price" data-price="11880.00">R$ 11.880,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+
+          <!-- Card 10 -->
+          <article class="product-card" data-id="nb-2" data-category="notebooks" data-offer="false">
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" 
+                alt="Ultrabook Profissional 14 polegadas Tela OLED" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Ultrabook</span>
+              <h3 class="product-card__title">Ultrabook Aero 14" OLED 2.8K Core Ultra 7</h3>
+              <p class="product-card__specs">16GB LPDDR5X • 1TB SSD • 1.19kg • Bateria 18h</p>
+              <div class="product-card__pricing">
+                <span class="product-card__price" data-price="7290.00">R$ 7.290,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+
+          <!-- Card 11 -->
+          <article class="product-card" data-id="nb-3" data-category="notebooks" data-offer="false">
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80" 
+                alt="Desktop Workstation Completo Gabinete Vidro Temperado" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Workstation</span>
+              <h3 class="product-card__title">PC Workstation Studio Pro Ryzen 9 + 64GB</h3>
+              <p class="product-card__specs">RTX 4080 • Water Cooler 360mm • Fonte 1000W Platinum</p>
+              <div class="product-card__pricing">
+                <span class="product-card__price" data-price="16490.00">R$ 16.490,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+
+          <!-- Card 12 -->
+          <article class="product-card" data-id="nb-4" data-category="notebooks" data-offer="true">
+            <span class="product-card__badge">-16%</span>
+            <div class="product-card__img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=600&q=80" 
+                alt="Cadeira Ergonômica Mesh Profissional" 
+                class="product-card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">Ergonomia</span>
+              <h3 class="product-card__title">Cadeira Ergonômica Executive Mesh 4D</h3>
+              <p class="product-card__specs">Apoio Lombar Dinâmico • Pistão Classe 4 • Até 150kg</p>
+              <div class="product-card__pricing">
+                <span class="product-card__old-price">R$ 2.190,00</span>
+                <span class="product-card__price" data-price="1839.00">R$ 1.839,00</span>
+              </div>
+              <button class="btn btn--card add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- ==================== VIEW 2: PRODUTOS / CATÁLOGO ==================== -->
+    <section id="view-produtos" class="view container page-section" aria-labelledby="catalog-heading">
+      <div class="page-header">
+        <span class="section-subtitle">Catálogo Completo</span>
+        <h1 id="catalog-heading" class="page-title">Todos os Produtos</h1>
+        <p class="page-desc">Filtre por categoria ou pesquise o componente ideal para o seu projeto.</p>
+      </div>
+
+      <div class="catalog-controls">
+        <div class="filter-tabs" role="group" aria-label="Filtrar produtos por categoria">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="hardware">Hardware</button>
+          <button class="filter-btn" data-filter="perifericos">Periféricos</button>
+          <button class="filter-btn" data-filter="notebooks">Notebooks & Workstations</button>
+        </div>
+
+        <div class="search-box">
+          <input type="search" id="catalogSearch" class="form-input" placeholder="Buscar produto (ex: RTX, Teclado, SSD)..." aria-label="Buscar produto" />
+        </div>
+      </div>
+
+      <div class="products-grid" id="catalogGrid">
+        <!-- Populado automaticamente via JS a partir dos produtos do index.html -->
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 3: OFERTAS ==================== -->
+    <section id="view-ofertas" class="view container page-section" aria-labelledby="offers-heading">
+      <div class="offers-banner">
+        <div class="offers-banner__content">
+          <span class="carousel__tag">Tech Week Relâmpago</span>
+          <h1 id="offers-heading" class="page-title">Ofertas Imperdíveis</h1>
+          <p>Descontos reais selecionados pela nossa equipe de engenharia. Estoque limitado!</p>
+        </div>
+        <div class="offers-banner__img-box">
+          <img 
+            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=700&q=80" 
+            alt="Hardware e tecnologia em promoção" 
+            class="offers-banner__img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="products-grid" id="offersGrid">
+        <!-- Populado automaticamente via JS com os itens marcados com data-offer="true" -->
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 4: SOBRE NÓS ==================== -->
+    <section id="view-sobre" class="view container page-section" aria-labelledby="about-heading">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-subtitle">Nossa História & DNA</span>
+          <h1 id="about-heading" class="page-title">Engenharia e Paixão por Tecnologia</h1>
+          <p class="about-text">
+            Fundada em 2018 por entusiastas de hardware e engenheiros de sistemas, a <strong>NexusTech</strong> nasceu com a missão de democratizar o acesso a componentes de alta performance no Brasil, oferecendo curadoria técnica rigorosa e transparência total.
+          </p>
+          <p class="about-text">
+            Cada produto em nosso catálogo passa por testes de compatibilidade e qualidade antes de ser disponibilizado. Seja para montar uma workstation de renderização 3D, um servidor local ou um setup competitivo de e-Sports, nossa equipe entrega confiança de ponta a ponta.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <strong class="stat-card__number">+85 mil</strong>
+              <span class="stat-card__label">Clientes Atendidos</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-card__number">99.4%</strong>
+              <span class="stat-card__label">Avaliações Positivas</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-card__number">24h</strong>
+              <span class="stat-card__label">Logística Expressa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-media">
+          <img 
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
+            alt="Laboratório técnico de montagem e testes da NexusTech" 
+            class="about-media__img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 5: CONTATO ==================== -->
+    <section id="view-contato" class="view container page-section" aria-labelledby="contact-heading">
+      <div class="page-header">
+        <span class="section-subtitle">Fale Conosco</span>
+        <h1 id="contact-heading" class="page-title">Atendimento & Suporte Técnico</h1>
+        <p class="page-desc">Dúvidas sobre compatibilidade de peças, pedidos ou parcerias corporativas? Envie sua mensagem.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3>Canais Diretos</h3>
+            <ul class="contact-list">
+              <li>
+                <strong>E-mail Comercial:</strong>
+                <span>atendimento@nexustech.com.br</span>
+              </li>
+              <li>
+                <strong>Suporte Técnico:</strong>
+                <span>suporte@nexustech.com.br</span>
+              </li>
+              <li>
+                <strong>Telefone / WhatsApp:</strong>
+                <span>(11) 4002-8922 — Seg a Sex, 08h às 19h</span>
+              </li>
+              <li>
+                <strong>Centro de Distribuição:</strong>
+                <span>Av. Tecnologia, 1500 - Distrito Industrial, São Paulo - SP</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-img-card">
+            <img 
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" 
+              alt="Equipe de suporte técnico online NexusTech" 
+              class="contact-img-card__img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="contactName" class="form-label">Nome Completo *</label>
+            <input type="text" id="contactName" class="form-input" placeholder="Ex: Lucas Andrade" required />
+            <span class="form-error" id="errorName"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">E-mail *</label>
+            <input type="email" id="contactEmail" class="form-input" placeholder="seuemail@exemplo.com" required />
+            <span class="form-error" id="errorEmail"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject" class="form-label">Assunto *</label>
+            <select id="contactSubject" class="form-input" required>
+              <option value="">Selecione um assunto...</option>
+              <option value="duvida-produto">Dúvida sobre Produto / Compatibilidade</option>
+              <option value="status-pedido">Status de Pedido</option>
+              <option value="garantia">Garantia & RMA</option>
+              <option value="corporativo">Vendas Corporativas (B2B)</option>
+            </select>
+            <span class="form-error" id="errorSubject"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage" class="form-label">Mensagem *</label>
+            <textarea id="contactMessage" rows="5" class="form-input" placeholder="Descreva sua dúvida ou solicitação em detalhes..." required></textarea>
+            <span class="form-error" id="errorMessage"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Enviar Mensagem</button>
+          <div class="form-feedback" id="contactFeedback" role="alert"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER FUNCIONAL ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      
+      <!-- Coluna 1: Institucional -->
+      <div class="footer__col">
+        <a href="#inicio" class="header__logo footer__logo" data-route="inicio">
+          <img 
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=80&q=80" 
+            alt="Logo NexusTech Rodapé" 
+            class="header__logo-img"
+            loading="lazy"
+          />
+          <span class="header__logo-text">Nexus<span class="text-accent">Tech</span></span>
+        </a>
+        <p class="footer__desc">Sua loja especializada em hardware de alta performance, periféricos competitivos e soluções profissionais.</p>
+        <ul class="footer__links">
+          <li><a href="#sobre" data-route="sobre">Sobre Nós</a></li>
+          <li><a href="#privacidade" data-modal="modal-privacidade">Política de Privacidade</a></li>
+          <li><a href="#termos" data-modal="modal-termos">Termos de Uso</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 2: Atendimento -->
+      <div class="footer__col">
+        <h3 class="footer__heading">Atendimento</h3>
+        <ul class="footer__links">
+          <li><a href="#contato" data-route="contato">Fale Conosco</a></li>
+          <li><a href="#trocas" data-modal="modal-trocas">Trocas e Devoluções</a></li>
+          <li><a href="#rastreio" data-modal="modal-rastreio">Rastrear Pedido</a></li>
+          <li><a href="#ofertas" data-route="ofertas">Central de Ofertas</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Categorias -->
+      <div class="footer__col">
+        <h3 class="footer__heading">Categorias</h3>
+        <ul class="footer__links">
+          <li><a href="#sec-hardware" data-scroll="sec-hardware">Hardware & Componentes</a></li>
+          <li><a href="#sec-perifericos" data-scroll="sec-perifericos">Periféricos Gamer</a></li>
+          <li><a href="#sec-notebooks" data-scroll="sec-notebooks">Notebooks & Workstations</a></li>
+          <li><a href="#produtos" data-route="produtos">Catálogo Completo</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Newsletter & Redes -->
+      <div class="footer__col">
+        <h3 class="footer__heading">Newsletter Tech</h3>
+        <p class="footer__desc">Receba cupons exclusivos e alertas de restock de GPUs e lançamentos.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <input type="email" id="newsletterEmail" class="form-input" placeholder="Seu melhor e-mail" required aria-label="E-mail para newsletter" />
+          <button type="submit" class="btn btn--primary">Assinar</button>
+        </form>
+        <p class="newsletter-feedback" id="newsletterFeedback"></p>
+
+        <div class="social-links" aria-label="Redes Sociais">
+          <a href="#instagram" class="social-link" data-modal="modal-social" aria-label="Instagram NexusTech">IG</a>
+          <a href="#youtube" class="social-link" data-modal="modal-social" aria-label="YouTube NexusTech">YT</a>
+          <a href="#discord" class="social-link" data-modal="modal-social" aria-label="Discord NexusTech">DC</a>
+          <a href="#github" class="social-link" data-modal="modal-social" aria-label="GitHub NexusTech">GH</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-content">
+        <p>&copy; 2026 NexusTech Informática Ltda. CNPJ: 00.000.000/0001-00. Todos os direitos reservados.</p>
+        <p>Preços e condições sujeitos a alteração sem aviso prévio.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= GAVETA DO CARRINHO (DRAWER) ================= -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="cart-drawer__header">
+      <h2 id="cartTitle">Seu Carrinho</h2>
+      <button class="close-btn" id="closeCartBtn" aria-label="Fechar carrinho">&times;</button>
+    </div>
+
+    <div class="cart-drawer__body" id="cartItemsContainer">
+      <p class="cart-empty-msg">Seu carrinho está vazio no momento.</p>
+    </div>
+
+    <div class="cart-drawer__footer">
+      <div class="cart-total">
+        <span>Subtotal:</span>
+        <strong id="cartSubtotal">R$ 0,00</strong>
+      </div>
+      <button class="btn btn--primary btn--full" id="checkoutBtn">Finalizar Compra</button>
+      <p class="checkout-msg" id="checkoutMsg"></p>
+    </div>
+  </aside>
+
+  <!-- ================= MODAIS INSTITUCIONAIS DO FOOTER ================= -->
+  <div class="modal" id="infoModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="modal__box">
+      <div class="modal__header">
+        <h3 id="modalTitle">Título do Modal</h3>
+        <button class="close-btn" id="closeModalBtn" aria-label="Fechar janela">&times;</button>
+      </div>
+      <div class="modal__body" id="modalBody">
+        <!-- Conteúdo dinâmico injetado via JS conforme o link clicado no footer -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Notificação -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
